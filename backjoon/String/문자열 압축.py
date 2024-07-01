@@ -4,15 +4,26 @@
 단 반복횟수가 1인 경우 생략합니다.
 '''
 
-s = input()
 charList = []
-for i in s:
-   if len(charList) == 0:
-        charList.append(i)
-   elif charList[len(charList)-1] != i:
-       charList.append(i)
-   else:
-       continue
 
-for i in charList:
-    print(i + str(s.count(i)), end= '')
+# 검출하기
+def solved(s):
+    for i in s:
+        if len(charList) == 0:
+            charList.append(i)
+        elif charList[len(charList) - 1] != i:
+            charList.append(i)
+        else:
+            continue
+
+
+# 출력하기
+def printNumber():
+    for i in charList:
+        print(i + str(s.count(i)), end='')
+
+
+# 메인 로직
+s = input()
+solved(s)
+printNumber()
