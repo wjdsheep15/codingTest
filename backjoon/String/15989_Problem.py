@@ -14,7 +14,7 @@
 
 '''
 
-# # 2, 1 로만 판단하기
+# 2 로만 판단하기
 # def div2(number):
 #     num2 = number // 2
 #     return num2
