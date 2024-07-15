@@ -42,8 +42,6 @@ for _ in range(e):
     graph[b].append(a)
 
 print(dfs(1, 0))
-print(visited)
-
 
 #  0      1        2       3    4       5       6    7
 # [[], [2, 5], [1, 3, 5], [2], [7], [1, 2, 6], [5], [4]]
