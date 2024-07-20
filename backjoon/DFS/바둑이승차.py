@@ -49,6 +49,7 @@ def DFS(L,subTotal,tsum):
         DFS(L+1,subTotal+a[L],tsum+a[L])
         DFS(L+1,subTotal,tsum+a[L])
 
+
 c,n=map(int,input().split())
 a=[]
 for _ in range(n):
