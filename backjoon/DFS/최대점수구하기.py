@@ -11,6 +11,7 @@ def solved(index, sumScore, sumTime):
         maxSum = sumScore
 
     if index >= n:
+
         return
 
     if sumTime + problemList[index][1] > 20:
@@ -20,6 +21,7 @@ def solved(index, sumScore, sumTime):
         sumTime += problemList[index][1]
 
     solved(index + 1, sumScore, sumTime)
+
 
 n, m = map(int, input().split())
 # n : 문제의 수
