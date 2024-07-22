@@ -11,11 +11,11 @@ def solved(index, sumScore, sumTime):
         maxSum = sumScore
 
     if index >= n:
-
         return
 
     if sumTime + problemList[index][1] > 20:
         solved(index + 1, sumScore, sumTime)
+
     else:
         sumScore += problemList[index][0]
         sumTime += problemList[index][1]
