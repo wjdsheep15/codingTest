@@ -24,8 +24,6 @@ def solved(index, sumScore, sumTime):
 
 
 n, m = map(int, input().split())
-# n : 문제의 수
-# m : 제한시간
 problemList = []
 for _ in range(n):
     problemList.append(list(map(int, input().split())))
