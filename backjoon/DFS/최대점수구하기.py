@@ -31,3 +31,4 @@ print(problemList)
 maxSum = 0
 solved(0, 0, 0)
 print(maxSum)
+
