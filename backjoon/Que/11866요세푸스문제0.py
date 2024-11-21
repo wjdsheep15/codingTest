@@ -8,18 +8,30 @@ N과 K가 주어지면 (N, K)-요세푸스 순열을 구하는 프로그램을 �
 
 '''
 
-from collections import deque
+# from collections import deque
 import sys
 input = sys.stdin.readline
+#
+# N, k = map(int, input().split())
+# deq = deque([i for i in range(1, N+1)])
+# result_li = []
+# while len(deq) != 0:
+#     for _ in range(k-1):
+#         deq.append(deq.popleft())
+#     result_li.append(str(deq.popleft()))
+#
+#
+# print('<'+', '.join(result_li)+'>')
 
-N, k = map(int, input().split())
-deq = deque([i for i in range(1, N+1)])
-result_li = []
-while len(deq) != 0:
-    for _ in range(k-1):
-        deq.append(deq.popleft())
-    result_li.append(str(deq.popleft()))
 
+N, K = map(int, input().split())
+li = [i for i in range(1, N + 1)]
+pt = 0
+ans = []
 
-print('<'+', '.join(result_li)+'>')
+for _ in range(N):
+    pt += K - 1
+    pt %= len(li)
+    ans.append(li.pop(pt))
 
+print(f"<{', '.join(map(str, ans))}>")
