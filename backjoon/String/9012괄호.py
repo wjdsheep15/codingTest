@@ -11,26 +11,42 @@
 출력은 표준 출력을 사용한다. 만일 입력 괄호 문자열이 올바른 괄호 문자열(VPS)이면 “YES”, 아니면 “NO”를 한 줄에 하나씩 차례대로 출력해야 한다.
 '''
 
-import sys
-input = sys.stdin.readline
+# import sys
+# input = sys.stdin.readline
+#
+# T = int(input())
+#
+# for _ in range(T):
+#     li = []
+#     result = "YES"
+#     input_string = input()
+#     for i in input_string:
+#         if i == '(':
+#             li.append(i)
+#         elif i == ')':
+#             if len(li) > 0 and li[-1] == '(':
+#                 li.pop()
+#             else:
+#                 result = "NO"
+#                 break
+#
+#     if len(li) > 0:
+#         result = "NO"
+#     print(result)
 
-count = int(input())
+for _ in range(int(input())):
+    stk = []
+    ans = "YES"
 
-for _ in range(count):
-    li = []
-    result = 0
-    input_string = input()
-    for i in input_string:
+    for i in input():
         if i == '(':
-            li.append(i)
-        elif i == ')':
-            if len(li) > 0 and li[-1] == '(':
-                li.pop()
+            stk.append(i)
+        else:
+            if len(stk) > 0:
+                stk.pop()
             else:
-                print('NO')
-                result = 1
-                break
-    if len(li) == 0 and result == 0:
-        print('YES')
-    if len(li) > 0 and result == 0:
-        print('NO')
+                ans = "NO"
+
+    if len(stk) > 0:
+        ans = "NO"
+    print(ans)
