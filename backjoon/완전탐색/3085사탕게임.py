@@ -13,6 +13,9 @@
 
 사탕의 색이 다른 인접한 두 칸이 존재하는 입력만 주어진다.
 '''
+
+import sys
+input = sys.stdin.readline
 N = int(input())
 board = [list(input()) for _ in range(N)]
 ans = 1
