@@ -44,5 +44,5 @@ def is_alphabet(s):
 
 
 s = list(input())
-chrList = []is_alphabet(s)
+chrList = is_alphabet(s)
 print(''.join(s))
