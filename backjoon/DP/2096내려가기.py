@@ -32,27 +32,6 @@ N줄에 0 이상 9 이하의 숫자가 세 개씩 적혀 있다. 내려가기 �
 import sys
 input = sys.stdin.readline
 
-# T = int(input())
-# graph = [list(map(int, input().split())) for _ in range(T)]
-# max_vaule = 0
-# min_value = int(1e9)
-# dp = [[0, 0] for _ in range(3)]
-# dp[0][0], dp[0][1] = graph[0][0], graph[0][0]
-# dp[1][0], dp[1][1] = graph[0][1], graph[0][1]
-# dp[2][0], dp[2][1] = graph[0][2], graph[0][2]
-#
-# for i in range(1, T):
-#     for j in range(3):
-#         dp[j][0] = dp[j][0] + max(graph[i][j-1 if j != 0 else j], graph[i][j], graph[i][j + 1 if j != 2 else j])
-#         dp[j][1] = dp[j][1] + min(graph[i][j - 1 if j != 0 else j], graph[i][j], graph[i][j + 1 if j != 2 else j])
-#
-# max_vaule = max(dp[0][0], dp[1][0], dp[2][0])
-# min_value = min(dp[0][1], dp[1][1], dp[2][1])
-# print(max_vaule, min_value)
-
-
-
-
 N = int(input())
 # 맨 처음 세개의 숫자를 입력받아 DP의 초기 값을 설정한다.
 arr = list(map(int, input().split()))
