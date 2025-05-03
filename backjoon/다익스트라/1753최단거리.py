@@ -24,23 +24,6 @@
 7
 INF
 """
-import sys, heapq
-
-input = sys.stdin.readline
-INF = int(1e9)
-
-v, e = map(int, input().split())
-start = int(input())
-
-graph = [[] for _ in range(v+1)]
-
-for _ in range(e):
-    a, b, c = map(int, input().split())
-    graph[a].append((b,c))
-    graph[b].append((a,c))
-
-
----
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10**6)
