@@ -29,8 +29,9 @@ Case 4: 8
 Case 5: 7
 """
 import sys
+
 input = sys.stdin.readline
 
-for i in range(1, int(input().strip())+1):
+for i in range(1, int(input().strip()) + 1):
     a, b = map(int, input().split())
-    print("Case %d: %d" % (i, a+b))
+    print("Case %d: %d" % (i, a + b))
